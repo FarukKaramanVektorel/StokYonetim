@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StokYonetim.Application/StokYonetim.Application.csproj" />
+    <Project Path="src/StokYonetim.Domain/StokYonetim.Domain.csproj" />
+    <Project Path="src/StokYonetim.Inf/StokYonetim.Inf.csproj" />
+    <Project Path="src/StokYonetim.Web/StokYonetim.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/StokYonetim.Tests/StokYonetim.Tests.csproj" />
+  </Folder>
+</Solution>

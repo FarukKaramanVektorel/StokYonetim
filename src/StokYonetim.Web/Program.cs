@@ -1,7 +1,14 @@
+using StokYonetim.Inf;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionStrings = builder.Configuration.GetConnectionString("StokDb")
+    ?? throw new InvalidOperationException("StokDb bağlantı cümlesi bulunamadı");
+
+
+
 
 var app = builder.Build();
 

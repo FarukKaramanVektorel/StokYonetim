@@ -300,6 +300,10 @@ namespace StokYonetim.Inf.Persistance.Migrations
                     b.Property<bool>("Aktif")
                         .HasColumnType("bit");
 
+                    b.Property<decimal>("AlisFiyati")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Barkod")
                         .HasMaxLength(50)
                         .IsUnicode(false)

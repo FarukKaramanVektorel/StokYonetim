@@ -26,7 +26,7 @@ namespace StokYonetim.Domain.Entities
 
             if ((seviye > MaksimumSeviye))
             {
-                throw new DomainException($"KAtegori derinliği en fazla {MaksimumSeviye} olabilir");
+                throw new DomainException($"Kategori derinliği en fazla {MaksimumSeviye} olabilir");
             }
             var kategori = new Kategori
             {

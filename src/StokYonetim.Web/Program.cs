@@ -7,7 +7,7 @@ builder.Services.AddControllersWithViews();
 var connectionStrings = builder.Configuration.GetConnectionString("StokDb")
     ?? throw new InvalidOperationException("StokDb bağlantı cümlesi bulunamadı");
 
-builder.Services.AddInf(connectionStrings);
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 

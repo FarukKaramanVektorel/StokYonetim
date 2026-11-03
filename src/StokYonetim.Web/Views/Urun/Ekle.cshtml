@@ -1,0 +1,52 @@
+﻿@using StokYonetim.Domain.Enums
+@model StokYonetim.Application.DTOs.UrunCreateDto
+
+@{
+    ViewData["Title"] = "Yeni Ürün Ekle";
+}
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Ekle" method="post">
+            <div class="mb-3">
+                <label asp-for="Barkod" class="form-label">Barkod:</label>
+                <input asp-for="Barkod" class="form-control" placeholder="Örn: 896..." />
+                <span asp-validation-for="Barkod" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Ad" class="form-label">Ad:</label>
+                <input asp-for="Ad" class="form-control" placeholder="Ürün adını giriniz..." />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="AlisFiyati" class="form-label">Alış Fiyatı:</label>
+                <input asp-for="AlisFiyati" class="form-control" placeholder="Alış fiyatını giriniz" />
+                <span asp-validation-for="AlisFiyati" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="SatisFiyati" class="form-label">Satış Fiyatı:</label>
+                <input asp-for="SatisFiyati" class="form-control" placeholder="Örn: 896..." />
+                <span asp-validation-for="SatisFiyati" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="KategoriId" class="form-label">Kategori Id:</label>
+                <input asp-for="KategoriId" type="number" class="form-control" />
+                <span asp-validation-for="KategoriId" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Birim" class="form-label">Birim:</label>
+                <input asp-for="Birim" class="form-select" asp-items="Html.GetEnumSelectList<Birim>()" />
+                <span asp-validation-for="Birim" class="text-danger"></span>
+            </div>
+
+        
+            <button type="submit" class="btn btn-success">Kaydet</button>
+            <a asp-action="Index" class="btn btn-secondary">İptal</a>
+
+        </form>
+
+    </div>
+</div>
+
+            @section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+            }

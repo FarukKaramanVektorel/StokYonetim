@@ -14,7 +14,8 @@ namespace StokYonetim.Domain.Entities
         public decimal SatisFiyati { get; set; }
         public decimal VarsayilanKritikSeviye { get; set; }
         public bool Aktif { get; set; } = true;
-
+        public decimal AlisFiyati { get; set; }
+       
         public int KategoriId { get; set; }
         public Kategori Kategori { get; set; } = null!;
 
